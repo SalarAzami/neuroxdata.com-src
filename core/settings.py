@@ -4,8 +4,7 @@ import os
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.environ.get("SECRET_KEY", "dev-secret-key-change-me")
-DEBUG = os.environ.get("DEBUG", "1") == "1"
-
+DEBUG = False
 
 INSTALLED_APPS = [
     "django.contrib.admin",
@@ -84,3 +83,7 @@ ALLOWED_HOSTS = [
     'www.neuroxdata.com'
 ]
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://neuroxdata.com",
+    "https://www.neuroxdata.com",
+]
