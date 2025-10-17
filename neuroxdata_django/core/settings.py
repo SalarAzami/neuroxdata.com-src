@@ -4,9 +4,22 @@ import os
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.environ.get("SECRET_KEY", "dev-secret-key-change-me")
-DEBUG = os.environ.get("DEBUG", "1") == "1"
-ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "*").split(",")
 
+DEBUG = True  # Production mode
+
+ALLOWED_HOSTS = [
+    ".onrender.com",
+    "neuroxdata.com",
+    "www.neuroxdata.com",
+]
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://neuroxdata.com",
+    "https://www.neuroxdata.com",
+    "https://neuroxdata-com-src.onrender.com",
+]
+
+# Application definition
 INSTALLED_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
@@ -48,6 +61,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "core.wsgi.application"
 
+# Database (SQLite for now)
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.sqlite3",
@@ -55,31 +69,15 @@ DATABASES = {
     }
 }
 
-AUTH_PASSWORD_VALIDATORS = [
-    {"NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator"},
-    {"NAME": "django.contrib.auth.password_validation.MinimumLengthValidator"},
-    {"NAME": "django.contrib.auth.password_validation.CommonPasswordValidator"},
-    {"NAME": "django.contrib.auth.password_validation.NumericPasswordValidator"},
-]
+# Static files (CSS, JS, images)
+STATIC_URL = "/static/"
+STATICFILES_DIRS = [BASE_DIR / "main" / "static"]
+STATIC_ROOT = BASE_DIR / "staticfiles"
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 LANGUAGE_CODE = "en-us"
 TIME_ZONE = "UTC"
 USE_I18N = True
 USE_TZ = True
 
-STATIC_URL = "/static/"
-STATICFILES_DIRS = [BASE_DIR / "main" / "static"]
-STATIC_ROOT = BASE_DIR / "staticfiles"
-
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
-
-STATIC_URL = '/static/'
-from pathlib import Path
-STATIC_ROOT = Path(__file__).resolve().parent.parent / 'staticfiles'
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-
-ALLOWED_HOSTS = [
-    '.onrender.com',
-    'neuroxdata.com',
-    'www.neuroxdata.com'
-]
