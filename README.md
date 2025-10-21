@@ -15,3 +15,4 @@ Open http://127.0.0.1:8000/
 - CSS: `main/static/main/styles.css` (sample keyframes included)
 - Templates: `main/templates/main/home.html`
 - JS frameworks you can add later: HTMX/Alpine.js/React/Vue (serve via CDN or bundler)
+- 
