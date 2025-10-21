@@ -1,6 +1,6 @@
 # neuroxdata — Django Starter ( Notebook-generated ) 
 
-### Quickstart 
+## Quickstart 
 ```bash 
 python -m venv .venv
 source .venv/bin/activate  # Windows: .venv\Scripts\activate
