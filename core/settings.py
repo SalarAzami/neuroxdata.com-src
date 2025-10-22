@@ -78,12 +78,15 @@ STATIC_ROOT = Path(__file__).resolve().parent.parent / 'staticfiles'
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 ALLOWED_HOSTS = [
-    '.onrender.com',
     'neuroxdata.com',
-    'www.neuroxdata.com'
+    'www.neuroxdata.com',
+    'neuroxdatacom-src-production.up.railway.app',
+    '127.0.0.1',
+    'localhost'
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://neuroxdata.com",
-    "https://www.neuroxdata.com",
+    'https://neuroxdata.com',
+    'https://www.neuroxdata.com',
+    'https://neuroxdatacom-src-production.up.railway.app'
 ]

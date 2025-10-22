@@ -1,6 +1,6 @@
-# neuroxdata — Django Starter (Notebook-generated) 
+### neuroxdata — Django Starter (Notebook-generated) 
 
-## Quickstart 
+# Quickstart 
 ```bash 
 python -m venv .venv
 source .venv/bin/activate  # Windows: .venv\Scripts\activate
@@ -11,7 +11,8 @@ python manage.py runserver
 
 Open http://127.0.0.1:8000/
 
-## Where to add animations?
+# Where to add animations ??
 - CSS: `main/static/main/styles.css` (sample keyframes included)
 - Templates: `main/templates/main/home.html`
 - JS frameworks you can add later: HTMX/Alpine.js/React/Vue (serve via CDN or bundler)
+- 
