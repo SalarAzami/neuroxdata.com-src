@@ -81,12 +81,10 @@ ALLOWED_HOSTS = [
     'neuroxdata.com',
     'www.neuroxdata.com',
     'neuroxdatacom-src-production.up.railway.app',
-    '127.0.0.1',
-    'localhost'
 ]
 
 CSRF_TRUSTED_ORIGINS = [
     'https://neuroxdata.com',
     'https://www.neuroxdata.com',
-    'https://neuroxdatacom-src-production.up.railway.app'
+    'https://neuroxdatacom-src-production.up.railway.app',
 ]
