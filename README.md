@@ -1,4 +1,5 @@
-### neuroxdata — Django Starter (Notebook-generated) 
+### neuroxdata — Django Starter (Notebook-generated) -
+Bearbeitet am:
 
 # Quickstart 
 ```bash 
